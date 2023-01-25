@@ -47,5 +47,5 @@ let firstname = document.getElementById("FirstName").value;
       });
     });
     function redirect(){
-      window.location.href = "instructor.html";
+      window.location.href = "application.html";
     }

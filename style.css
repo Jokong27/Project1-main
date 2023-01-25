@@ -91,6 +91,13 @@
     padding-top: 40px;
 }
 
+.applicationbg {
+    background: url(https://img1.goodfon.com/original/1920x1080/2/cb/ganteli-trenazhernyy-zal.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 250px 0px 100px 0;
+    padding-top: 40px;
+}
+
 .registrationbg {
     background: url(https://wallpaperaccess.com/full/1087594.jpg) no-repeat center center;
     background-size: cover;
