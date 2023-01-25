@@ -30,6 +30,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
           </li>
+          <!--
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -39,8 +40,16 @@
               <li><a class="dropdown-item" href="chest.html">Chest and Triceps</a></li>
               <li><a class="dropdown-item" href="back.html">Back and Biceps</a></li>
               <li><a class="dropdown-item" href="legs.html">Shoulder and Legs</a></li>
+              <li><form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+              <input type="text" placeholder="Search.." name="search2">
+              <button type="submit"><i class="fa fa-search"></i></button></form></li>
             </ul>
           </li>
+          -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="workout.html">WORKOUTS</a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="instructor.html">INSTRUCTOR</a>
           </li>
@@ -106,6 +115,49 @@
       </div>
     </div>
   </div>
+
+<!--contact us-->
+  <section class="section" id="contact-us">
+    <div class="container-fluid col-lg-12">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-xs-12">
+          <div class="contact-form">
+            <form id="contactForm" action="" method="post">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <fieldset>
+                    <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <fieldset>
+                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email*"
+                      required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="subject" type="text" id="subject" placeholder="Subject">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="main-button">Send
+                      Message</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
