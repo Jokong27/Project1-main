@@ -226,3 +226,8 @@ span {
     font-weight: 500;
     color: black;
 }
+
+#searchInput {
+    background-color: #000000;
+    color: #fff;
+}
