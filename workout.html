@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="workout.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>RFG Gym</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -15,14 +15,83 @@
 </head>
 
 <body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-5-strong">
     <div class="container">
-        <form action="https://rapidapi.com/search/gym" method="get" class="search-bar">
-            <input type="text" placeholder="search anything" name="a">
-            <button type="submit"><img src="search.png"></button>
-        </form>
+      <a class="navbar-brand" href="index.html">
+        <img src="logo2.png" alt="Rfglogo" style="width: 200px; height:115px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+          </li>
+          <!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            WORKOUTS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="chest.html">Chest and Triceps</a></li>
+            <li><a class="dropdown-item" href="back.html">Back and Biceps</a></li>
+            <li><a class="dropdown-item" href="legs.html">Shoulder and Legs</a></li>
+            <li><form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." name="search2">
+            <button type="submit"><i class="fa fa-search"></i></button></form></li>
+          </ul>
+        </li>
+        -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="workout.html">WORKOUTS</a>
+          </li>
 
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="instructor.html">INSTRUCTOR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="talk.html">LET'S TALK</a>
+          </li>
+      </div>
     </div>
- 
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-bold heading">Awesome Exercises You <br> Should Know</h1>
+      </div>
+      <div class="col-12 search-container">
+        <div class="form-group">
+          <input type="text" class="form-control search-input" value="search"
+            onChange="setSearch(e.target.value.toLowerCase())" placeholder="Search Exercises">
+          <button class="btn btn-danger search-btn" onClick="handleSearch">Search</button>
+        </div>
+      </div>
+      <div class="col-12 scrollbar-container">
+        <HorizontalScrollbar data="bodyParts" bodyParts setBodyPart="setBodyPart" bodyPart="bodyPart">
+        </HorizontalScrollbar>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="container-search">
+    <form action="https://rapidapi.com/search/gym" method="GET" class="search-bar">
+      <input type="text" placeholder="search anything" name="a">
+      <button type="submit"><img src="search.png"></button>
+    </form>
+  </div>
+
   <!-- Footer -->
   <div class="container-fluid  text-white p-3" style=" Roboto Condensed , Helvetica, sans-serif background: #0f0c29;
   background: linear-gradient(to right, #2b2b33, #101014, #000000);">
