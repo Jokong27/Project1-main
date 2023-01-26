@@ -11,7 +11,7 @@ let curArr = 0;
 let minArr = 0;
 let maxArr = 11;
 
-let page = 1; // initialize page to 1
+let back = 1; // initialize page to 1
 let workoutsPerPage = 12; // number of workouts to display per page
 let pageCount = 0;
 let curPage = 1;
@@ -29,14 +29,14 @@ const searchBtn = () => {
 
     const searchBtn = () => {
 
-        async function getWorkouts(page, workoutsPerPage) {
-            const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/bodyPartList${page}&workoutsPerPage=${workoutsPerPage}`, options);
+        async function getWorkouts(back, workoutsPerPage) {
+            const response = await fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', options);
             const data = await response.json();
             return data;
         }
 
         async function displayWorkouts() {
-            let workouts = await getWorkouts(page, workoutsPerPage);
+            let workouts = await getWorkouts(back, workoutsPerPage);
             pageCount = workouts.length % 12 > 1 ? (workouts.length - workouts.length % 12) / 12 + 1 : false;
 
             let inputValueOrg = searchInputValue;
@@ -69,7 +69,7 @@ const searchBtn = () => {
                                             if (workouts[x].platform == "PC (Windows)") {
                                                 return `<i class="fa-brands fa-windows"></i>
                                                   `;
-                                            } else if (games[x].platform == "Web Browser") {
+                                            } else if (workouts[x].platform == "Web Browser") {
                                                 return `<i class="fa-regular fa-window-maximize"></i>`;
                                             } else {
                                                 return `<i class="fa-brands fa-windows"></i> <i class="fa-regular fa-window-maximize"></i>`;
