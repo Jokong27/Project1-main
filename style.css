@@ -413,3 +413,9 @@ span {
     width: 100%;
     padding: 20px;
   }
+
+  .container-fluid {
+    font-family: 'Roboto Condensed', Helvetica, sans-serif;
+    background: #0f0c29;
+    background: linear-gradient(to right, #2b2b33, #101014, #000000);
+}
