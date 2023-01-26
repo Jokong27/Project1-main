@@ -36,7 +36,7 @@ const searchBtn2 = () => {
         }
 
         async function displayWorkouts() {
-            let workouts = await getWorkouts(page, gamesPerPage);
+            let workouts = await getWorkouts(page, workoutsPerPage);
             pageCount = workouts.length % 12 > 1 ? (workouts.length - workouts.length % 12) / 12 + 1 : false;
 
             let inputValueOrg = searchInputValue;
