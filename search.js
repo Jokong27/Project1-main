@@ -21,7 +21,7 @@ let searchCounter = 0;
 
 let searchInputValue;
 
-const searchBtn2 = () => {
+const searchBtn = () => {
     searchInputValue = document.getElementById("searchInput").value
     document.getElementById("searchField").innerHTML = "";
     document.getElementById("searchFieldInfo").innerHTML = "";
