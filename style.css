@@ -331,7 +331,7 @@ span {
     padding: 10px 20px;
     backdrop-filter: blur(4px) saturate(180%);
 }
-.search-bar input{
+.searchInput{
     background: transparent;
     flex: 1;
     border: 0;
@@ -344,7 +344,7 @@ span {
     color: #cac7ff;
 }
 
-.search-bar button img {
+.searchBtnSize img {
     width: 25px;
 }
 .search-bar button {
