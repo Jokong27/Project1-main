@@ -34,7 +34,6 @@ const searchBtn = () => {
     async function getNames(names) {
         const response = await fetch(`https://exerciseapi3.p.rapidapi.com/search/?name=${names}Barbell%20Bench%20Press', options)`, options);
         const data = await response.json();
-
         return data;
     }
 
@@ -44,6 +43,7 @@ const searchBtn = () => {
 
         let inputValueOrg = searchInputValue;
         let inputValue = searchInputValue.toLowerCase().split("");
+
 
      
             
@@ -66,10 +66,10 @@ const searchBtn = () => {
                                             console.log(searchCounter);
                                 
                                             const icon = () => {
-                                                if (names[x].platform == "PC (Windows)") {
+                                                if (games[x].platform == "PC (Windows)") {
                                                   return `<i class="fa-brands fa-windows"></i>
                                                   `;
-                                                } else if (names[x].platform == "Web Browser") {
+                                                } else if (games[x].platform == "Web Browser") {
                                                   return `<i class="fa-regular fa-window-maximize"></i>`;
                                                 } else {
                                                   return `<i class="fa-brands fa-windows"></i> <i class="fa-regular fa-window-maximize"></i>`;
@@ -83,18 +83,18 @@ const searchBtn = () => {
                                         
                                         <small  class="col-lg-3 col-md-6 card-group p-2 rounded-0 text-start">
                                             <div class="card text-bg-dark shadow rounded-0 imgZoom" style="overflow: hidden;">
-                                                <img src=${names[x].thumbnail} class="card-img-top rounded-0" alt="Loading...">
+                                                <img src=${games[x].thumbnail} class="card-img-top rounded-0" alt="Loading...">
                                                 <div class="card-img-overlay d-flex align-items-start rounded-0 cardOvrLay" style="
                                                 height: 197px;">
-                                                <small class="card-text mb-4 orangeBg ps-lg-2 pe-lg-2 p-lg-1 m-0">${names[x].genre}</small>
+                                                <small class="card-text mb-4 orangeBg ps-lg-2 pe-lg-2 p-lg-1 m-0">${games[x].genre}</small>
                                                 </div>
                                                 <div class="card-body d-grid">
-                                                <small class="card-title fw-bold fs-5">${names[x].title}</small>
-                                                <small class="card-text mb-4">${icon()} | ${names[x].release_date}</small>
-                                                <small class="card-text">${names[x].short_description}</small>
+                                                <small class="card-title fw-bold fs-5">${games[x].title}</small>
+                                                <small class="card-text mb-4">${icon()} | ${games[x].release_date}</small>
+                                                <small class="card-text">${games[x].short_description}</small>
                                                 </div>
                                                 <div class="card-footer d-flex justify-content-between align-items-center">
-                                                <a class="cardLink aLink" href="${names[x].freetogame_profile_url}">See more details</a>
+                                                <a class="cardLink aLink" href="${games[x].freetogame_profile_url}">See more details</a>
                                                 <div class="orangeText text-light rounded-1 border-0 p-lg-1 fw-bold ps-lg-2 pe-lg-2" >Free</div>
                                                 </div>
                                             </div>
@@ -110,7 +110,7 @@ const searchBtn = () => {
                     }
                     
             }
-        exercise2 = names;
+        exercise2 = games;
         
         }
         
