@@ -31,7 +31,7 @@ const searchBtn2 = () =>{
 const searchBtn = () => {
 
     async function getNames(names) {
-        const response = await fetch(`https://exerciseapi3.p.rapidapi.com/search/?name=${names}`, options);
+        const response = await fetch(`https://exerciseapi3.p.rapidapi.com/search/?name=${names}', options)`, options);
         const data = await response.json();
         return data;
     }
