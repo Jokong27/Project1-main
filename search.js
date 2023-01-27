@@ -1,18 +1,19 @@
 const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '584c938872msh5a0e1cf02a5269fp197d03jsna83433d26996',
-        'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
-    }
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '23c08c77a1mshcec0f1d127e5ad3p141902jsn9eda6d816e94',
+		'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+	}
 };
 
-let games2 = [];
+
+let excercise2 = [];
 let curArr = 0;
 let minArr = 0;
 let maxArr = 11;
 
 let page = 1; // initialize page to 1
-let gamesPerPage = 12; // number of games to display per page
+let exercisePerPage = 12; // number of games to display per page
 let pageCount = 0;
 let curPage = 1;
 
@@ -29,15 +30,15 @@ const searchBtn2 = () =>{
 
 const searchBtn = () => {
 
-    async function getGames(page, gamesPerPage) {
-        const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=alphabetical&page=${page}&gamesPerPage=${gamesPerPage}`, options);
+    async function getNames(names) {
+        const response = await fetch(`https://exerciseapi3.p.rapidapi.com/search/?name=${names}`, options);
         const data = await response.json();
         return data;
     }
 
-    async function displayGames() {
-        let games = await getGames(page, gamesPerPage);
-        pageCount = games.length % 12 > 1 ? (games.length - games.length % 12) / 12 + 1 : false;
+    async function displayNames() {
+        let names = await getNames(names);
+        pageCount = names.length % 12 > 1 ? (names.length - names.length % 12) / 12 + 1 : false;
 
         let inputValueOrg = searchInputValue;
         let inputValue = searchInputValue.toLowerCase().split("");
@@ -110,12 +111,12 @@ const searchBtn = () => {
                     }
                     
             }
-        games2 = games;
+        exercise2 = games;
         
         }
         
     }
-    displayGames();
+    displayNames();
 }
 searchBtn();
 }

@@ -48,6 +48,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="talk.html">LET'S TALK</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="search.html">Search Your Workout here!</a>
+                      </li>
             </div>
     </nav>
     </header>
@@ -62,26 +65,23 @@
 
             <nav id="mainNavbar">
 
-            </nav>>
+            </nav>
 
             <div id="quickLinks">
 
-                <div>
-                    Hello
-                </div>
                 <div class="container pt-4">
-                    <h1 class="orangeText text-center m-4 mb-3 text-light fw-bold">
-                        <img class="mb-2" src="https://i.ibb.co/Ybyzj0Z/GGNext-Logo-white2.png" width="100" alt=""><br>
-                        Search <span class="text-light">Game Title</span>
+                    <h1 class="text-center m-4 mb-3">
+                        <img class="mb-2" src="logo2.png" width="500" alt=""><br>
+                        Search your <span class="fw-bold">Gym Exercise</span> here!
                     </h1>
                     <hr class="container-fluid col-9 hr2">
                     <div class="container text-center pt-5 mt-5 pb-5 mb-5">
                         <div class="container d-flex justify-content-center">
-                            <input class="form-control inputBg border-0 border-bottom rounded-0 text-light"
-                                type="search" placeholder="Enter game title or keyword" id="searchInput">
+                            <input class="form-control inputBg border-0 border-bottom rounded-0"
+                                type="search" placeholder="Enter gym excerise or keyword" id="searchInput">
 
-                            <button type="button" class="btn col-1 p-0" onclick="searchBtn()"><img
-                                    class="searchBtnSize" src="images/search-icon.png" alt=""
+                            <button type="button" class="btn col-1 p-0 bg-secondary" onclick="searchBtn2()"><img
+                                    class="searchBtnSize"
                                     id="searchBtnSize"></button>
                         </div>
                         <div class="container">
@@ -203,9 +203,7 @@
         </div>
     </div>
 
-    <script src="general.js"></script>
-    <script src="searchbar.js"></script>
-    <script src="contact2.js"></script>
+    <script src="search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))</script>
